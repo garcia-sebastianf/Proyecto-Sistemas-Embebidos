@@ -32,3 +32,5 @@ En Bash, el operador "&" al final de una línea de comandos permite ejecutar el 
     #Ejecuta tres comandos en una línea
     comando1 ; comando2 ; comando3
 
+Comandos asociados:
+    
