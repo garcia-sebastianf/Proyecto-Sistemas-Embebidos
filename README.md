@@ -16,5 +16,19 @@ En sistemas GNU/Linux, el control de prioridad de un proceso se gestiona mediant
 
     renice -c <nuevo_nice_value> -p <PID_del_proceso>
     
-Para cambiar el NI para todos los procesos de un usuario en específico se utiliza el comando renice junto con la opción '-u'.
+Para cambiar el NI para todos los procesos de un usuario en específico se utiliza el comando **renice** junto con la opción '-u'.
+
+    renice -n <nuevo_nice_value> -u <nombre_de_usuario>
+
+El PR, relacionado inversamente con el NI, a medida que NI aumenta, el PR disminuye y viceversa. Los valores típicos van de 100 a -100.
+
+# Uso del operador '&' al final de una línea de comandos en Bash y la separación de múltiples comandos en una sola línea.
+
+En Bash, el operador "&" al final de una línea de comandos permite ejecutar el comando en segundo plano, liberando la terminal para otros comandos mientras el primero se ejecuta. Para agrupar varios comandos en una sola línea, se emplea el punto y coma.
+
+    #Ejecuta 'mi_comando' en segundo plano
+    mi_comando &
+
+    #Ejecuta tres comandos en una línea
+    comando1 ; comando2 ; comando3
 
