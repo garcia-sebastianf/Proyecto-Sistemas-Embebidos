@@ -10,7 +10,7 @@ Un hilo es la unidad más pequeña de ejecución dentro de un proceso. Los hilos
 
 El término tarea es a veces utilizado de una forma más general, ya sea para referirse a una unidad de trabajo que deba realizarse ya sea correspondiente a un hilo o a un proceso indistintamente. En otros contextos "tarea" se puede utilizar de formma intercambiable con "hilo" para describir la unidad de ejecución dentro del proceso.
 
-#¿Cómo se maneja el control de prioridad de un proceso en GNU/Linux, detallando que es el NI y el PR y ¿Cómo se modifica este valor para un proceso?¿Cómo se cambia el valor de este proceso para todos los procesos de un usuario?
+# ¿Cómo se maneja el control de prioridad de un proceso en GNU/Linux, detallando que es el NI y el PR y ¿Cómo se modifica este valor para un proceso?¿Cómo se cambia el valor de este proceso para todos los procesos de un usuario?
 
 En sistemas GNU/Linux, el control de prioridad de un proceso se gestiona mediante el Nice Value (NI) y el Priority (PR). El NI, que varía de -20 a 19, determina la prioridad de un proceso, donde un NI vajo indica mayor prioridad. Para modificar la prioridad de un proceso, se puede usar el siguiente comando: 
 
