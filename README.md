@@ -13,6 +13,6 @@ El término tarea es a veces utilizado de una forma más general, ya sea para re
 # ¿Cómo se maneja el control de prioridad de un proceso en GNU/Linux, detallando que es el NI y el PR y ¿Cómo se modifica este valor para un proceso?¿Cómo se cambia el valor de este proceso para todos los procesos de un usuario?
 
 En sistemas GNU/Linux, el control de prioridad de un proceso se gestiona mediante el Nice Value (NI) y el Priority (PR). El NI, que varía de -20 a 19, determina la prioridad de un proceso, donde un NI vajo indica mayor prioridad. Para modificar la prioridad de un proceso, se puede usar el siguiente comando: 
-  # renice -c <nuevo_nice_value> -p <PID_del_proceso>
-  
+  *renice -c <nuevo_nice_value> -p <PID_del_proceso>*
+Para cambiar el NI para todos los procesos de un usuario en específico se utiliza el comando renice junto con la opción '-u'.
 
