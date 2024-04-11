@@ -77,3 +77,37 @@ Se corrobora que el módulo convertidor USB a TTL sea reconocido por el disposit
 
 ![image](https://github.com/garcia-sebastianf/Proyecto-Sistemas-Embebidos/assets/76495580/1345f422-d0a4-4014-aad4-86b7a7b57d1c)
 
+El modulo se encuentra asignado en el puerto COM11, este es el que se utilizará para establecer comunicación hacia la raspberry pi 3B+.
+
+Para comprobar su correcto funcionamiento, se realiza un script en el lenguaje de Python sobre la tarjeta raspberry pi 3B+ para la transmisión de datos. 
+
+![image](https://github.com/garcia-sebastianf/Proyecto-Sistemas-Embebidos/assets/76495580/93ea4020-7791-4da1-b55e-317cd919f3f8)
+
+Con el uso del programa de PuTTY se realiza la configuración de varios parámetros como números de bits de los datos, bit de parada, bits por segundo o baudios, la selección del puerto, etc.
+
+![image](https://github.com/garcia-sebastianf/Proyecto-Sistemas-Embebidos/assets/76495580/274d2d96-1e5f-4258-b169-cb6eadb36534)
+
+Al ejecutar el script se visualiza que se enciende un led azul ubicado sobre el módulo que corresponde a la recepción de los datos, lo que sirve como una comprobación inicial de que se está logrando realizar transmisión de datos. 
+
+Se establece la conexión en Putty y se logra tener el siguiente resultado en pantalla.
+
+![image](https://github.com/garcia-sebastianf/Proyecto-Sistemas-Embebidos/assets/76495580/62db8de2-35e2-413a-af26-ba4ed95f9890)
+
+**Capture datos de un sensor con comunicaciones i2c de su preferencia (temperatura, humedad, presión IMUS, acelerómetros, entre otros) usando un script de Python, para ello debe imprimir en pantalla el valor capturado a una taza de mínimo 1 dato por segundo.**
+
+Se utiliza el acelerómetro I2C ADXL345 y se realiza el siguiente Script de Python para la captura de los datos. 
+
+![image](https://github.com/garcia-sebastianf/Proyecto-Sistemas-Embebidos/assets/76495580/7b56be9d-b478-4f37-85c1-f568578510dc)
+
+Para este módulo, se obtienen tres valores de aceleración, uno por cada eje del espacio en tres dimensiones. También, estas tres aceleraciones pueden presentar valores negativos, lo que ofrece información adicional del sistema donde se encuentre ubicado el módulo. Sin embargo, para este proyecto se requiere optimizar la adquisición y operación para un solo dato, por lo que se opta por el uso de la librería **'math'**. Gracias a esta se pudo obtener un solo dato por medio de la magnitud de las tres componentes de aceleración. 
+
+Para decidir cada cuanto adquirir la lectura, se importa la librería time. En este caso, se agregaa '1' como parámetro de la función time.sleep() para establecer el tiempo de adquisición de los datos para cada segundo, quitar esta línea simplemente hará que se lean los datos a la máxima tasa de datos que pueda generar el módulo. 
+
+![image](https://github.com/garcia-sebastianf/Proyecto-Sistemas-Embebidos/assets/76495580/41e67b36-dd1e-48d5-b5dd-d66fdb1f3d0f)
+
+**Capture los datos de su sensor de temperatura 1 Wire igual que en el proyecto 1.**
+
+A continuación, se presentan las conexiones sobre la raspberry para realizar la captura de estos datos. 
+
+![image](https://github.com/garcia-sebastianf/Proyecto-Sistemas-Embebidos/assets/76495580/69e36c78-ce99-4189-b951-cc5f90fd9985)
+
