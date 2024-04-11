@@ -119,3 +119,9 @@ Ya se verificó la transmisión de datos y la adquisición de los valores de ace
 
 ![image](https://github.com/garcia-sebastianf/Proyecto-Sistemas-Embebidos/assets/76495580/94f09103-b808-48e7-a88e-f16342c360cf)
 
+A partir de diversas pruebas, se determinó que la opción óptima y más sencilla era enviar repetidamente y a la máxima tasa de transmisión los valores ingresados por el usuario. Esto se debe a problemas de sincronización, dado que el usuario puede enviar el dato en cualquier momento, lo que puede ocasionar dificultades ya que el programa en la Raspberry Pi encargado de recibir los datos puede no estar en la línea de código que lee el dato en ese preciso instante, sino ejecutando otras líneas de código. Esta falta de sincronización resultó en problemas inesperados, como la pérdida de información: a veces los datos llegaban incompletos o, en ocasiones, ni siquiera llegaban.
+
+A continuación, se presenta el script de Python utilizado para la recepción de los datos en la Raspberry Pi.
+
+![image](https://github.com/garcia-sebastianf/Proyecto-Sistemas-Embebidos/assets/76495580/1ea132b1-29f5-41e8-bf08-de4b5456c262)
+
