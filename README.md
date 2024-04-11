@@ -37,3 +37,9 @@ Comandos asociados:
 - **'jobs'**: Muestra los trabajos en segundo plano en la sesión actual de Bash.
 - **'$!'**: Representa el PID (identificador de proceso) del último comando ejecutado en segundo plano.
 - **'fg'**: Lleva un trabajo en segundo plano al primer plano.
+
+# Diferencia entre & y el comando parallel de bash, no de sh (sudo apt install parallel).
+
+En Bash, el uso del operador **'&'** y del comando **'parallel'** comparten el propósito de ejecutar comandos de manera paralela, pero se diferencian en su implementación y funcionalidad.
+
+**1. "&" en Bash:** 
