@@ -67,3 +67,9 @@ En resumen, mientras que el operador **"&"** es una característica integrada en
 
 El comando **'time'** en Bash se emplea para medir el tiempo de ejecución de un comando o un conjunto de comandos. Al utilizarlo, puedes obtener detalles sobre el tiempo que la CPU dedica al usuario y al sistema, así como el tiempo total transcurrido desde el inicio hasta la finalización del comando. La salida proporciona información útil para evaluar el rendimiento de un programa. Es esencial diferenciar entre la palabra clave **'time'** de Bash y el comando externo también llamado **'time'**, que ofrece funcionalidades similares, pero con salidas más resumidas. 
 
+#Proyecto
+
+**Punto 1:**
+
+**Nota. Para este proyecto necesitará un sensor I2C y un conversor USB Serial de 3.3v. (el serial si es posible lleve su portátil a la tienda y verifique que esté bueno, hay muchos clones no funcionales en el mercado).**
+
