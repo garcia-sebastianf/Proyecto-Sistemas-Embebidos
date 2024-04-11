@@ -113,3 +113,9 @@ A continuación, se presentan las conexiones sobre la raspberry para realizar la
 
 **Usando el módulo threading de Python o C (thread.h) implemente un hilo que lea de su sensor i2c a la tasa más alta que permita su sensor. Otro hilo que escriba en un puerto serial a mínimo 115200 bps el promedio de las útlimas N lecturas donde N puede ser configurado por el usuario con una variable de argumento de entrada serial de su programa en su programa (C o Python) y otro hilo que lea del puerto serial a la misma velocidad (115200), una trama así: (##PROMEDIO-NNN-##\n) donde NNN es el tamaño de la ventana de promedio, cualquier otro mensaje debe ser descartado y tomado como no válido.**
 
+Ya se verificó la transmisión de datos y la adquisición de los valores de aceleración, por lo que solamente queda implementar la recepción de los datos. Para ello, se opta por el uso de PyCharm, que es un entorno de desarrollo que permite escribir y ejecutar código realizado en Python. A continuación, se muestra el código para la transmisión de datos ingresados por el usuario a través de la consola. 
+
+![image](https://github.com/garcia-sebastianf/Proyecto-Sistemas-Embebidos/assets/76495580/c07f3899-4326-47e4-84e1-0348b1555cb3)
+
+![image](https://github.com/garcia-sebastianf/Proyecto-Sistemas-Embebidos/assets/76495580/94f09103-b808-48e7-a88e-f16342c360cf)
+
