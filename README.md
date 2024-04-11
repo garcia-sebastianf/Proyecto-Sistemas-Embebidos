@@ -43,3 +43,6 @@ Comandos asociados:
 En Bash, el uso del operador **'&'** y del comando **'parallel'** comparten el propósito de ejecutar comandos de manera paralela, pero se diferencian en su implementación y funcionalidad.
 
 **1. "&" en Bash:** 
+La utilización del operador **"&"** al final de una línea de comando permite ejecutar ese comando en segundo plano, permitiendo que la terminal esté disponible para otros comandos mientras el primero se ejecuta en segundo plano. 
+
+Este es un componente básico de Bash y opera a nivel de procesos. 
