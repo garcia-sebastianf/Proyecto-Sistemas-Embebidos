@@ -63,4 +63,7 @@ Por otro lado, el comando **'parallel'** es una herramienta externa que facilita
 
 En resumen, mientras que el operador **"&"** es una característica integrada en Bash para ejecutar comandos en segundo plano, el comando **'parallel'** es una herramienta externa que ofrece una forma más avanzada y estructurada de llevar a cabo operaciones en paralelo, proporcionando mayor control sobre la ejecución concurrente de comandos.
 
+**Funcionamiento del comando time en Bash.**
+
+El comando **'time'** en Bash se emplea para medir el tiempo de ejecución de un comando o un conjunto de comandos. Al utilizarlo, puedes obtener detalles sobre el tiempo que la CPU dedica al usuario y al sistema, así como el tiempo total transcurrido desde el inicio hasta la finalización del comando. La salida proporciona información útil para evaluar el rendimiento de un programa. Es esencial diferenciar entre la palabra clave **'time'** de Bash y el comando externo también llamado **'time'**, que ofrece funcionalidades similares, pero con salidas más resumidas. 
 
