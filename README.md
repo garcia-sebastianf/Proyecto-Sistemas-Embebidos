@@ -125,3 +125,11 @@ A continuación, se presenta el script de Python utilizado para la recepción de
 
 ![image](https://github.com/garcia-sebastianf/Proyecto-Sistemas-Embebidos/assets/76495580/1ea132b1-29f5-41e8-bf08-de4b5456c262)
 
+Una vez verificado el correcto funcionamiento de todos los scripts, se procede a unificarlos en un único código, separándolos por hilos de ejecución. La estructura del código se basa en el uso de tres hilos de ejecución, cada uno asociado a una función específica. Para implementar esto, fue necesario establecer una comunicación de datos entre los tres hilos de forma simultánea, lo que significa que los tres hilos se ejecutan al mismo tiempo y comparten datos en tiempo real. En este sentido, el uso de colas FIFO fue crucial, ya que facilitan la comunicación de los datos de manera sencilla y permiten la sincronización entre hilos; es decir, un hilo no puede tomar un dato de la cola hasta que otro hilo haya insertado un valor en la misma.
+
+Es importante destacar que la implementación de hilos en esta aplicación es muy adecuada. A pesar de la alta tasa de adquisición de datos de aceleración y la transmisión de datos por puerto serial a una alta velocidad de baudios, los tiempos de procesamiento son lo suficientemente rápidos como para permitir la realización de otras tareas dentro de las ventanas de tiempo de espera. Además, sin el uso de hilos, no sería posible calcular el promedio de aceleración en tiempo real, ya que tendríamos que detener la recepción de datos, calcular el promedio y luego reanudar la adquisición de datos, lo que resultaría en la pérdida de datos de aceleración. Sin embargo, con el uso de hilos, todos los datos que llegan se utilizan para calcular el promedio de aceleración. 
+
+Para estructurar todo el código, se comenzó realizando un esquema que muestra gráficamente cómo debe ser el flujo de los datos a través de los hilos. 
+
+![image](https://github.com/garcia-sebastianf/Proyecto-Sistemas-Embebidos/assets/76495580/32b080a7-3043-4b84-b4d4-190234d5c331)
+
