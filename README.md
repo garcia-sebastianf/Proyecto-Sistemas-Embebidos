@@ -34,6 +34,6 @@ En Bash, el operador "&" al final de una línea de comandos permite ejecutar el 
 
 Comandos asociados:
 
-- 'jobs': Muestra los trabajos en segundo plano en la sesión actual de Bash.
-- '$!': Representa el PID (identificador de proceso) del último comando ejecutado en segundo plano.
-- 'fg': Lleva un trabajo en segundo plano al primer plano.
+- **'jobs'**: Muestra los trabajos en segundo plano en la sesión actual de Bash.
+- **'$!'**: Representa el PID (identificador de proceso) del último comando ejecutado en segundo plano.
+- **'fg'**: Lleva un trabajo en segundo plano al primer plano.
