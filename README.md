@@ -42,7 +42,25 @@ Comandos asociados:
 
 En Bash, el uso del operador **'&'** y del comando **'parallel'** comparten el propósito de ejecutar comandos de manera paralela, pero se diferencian en su implementación y funcionalidad.
 
-**1. "&" en Bash:** 
+**1. '&' en Bash:** 
 La utilización del operador **"&"** al final de una línea de comando permite ejecutar ese comando en segundo plano, permitiendo que la terminal esté disponible para otros comandos mientras el primero se ejecuta en segundo plano. 
 
 Este es un componente básico de Bash y opera a nivel de procesos. 
+
+    #Ejecuta 'mi_comando' en segundo plano
+    mi_comando &
+
+**2. Comando 'parallel' en Bash:**
+Por otro lado, el comando **'parallel'** es una herramienta externa que facilita la ejecución estructurada y controlada de comandos en paralelo.
+
+**'parallel'** divide la entrada en bloques y ejecuta comandos en paralelo utilizando múltiples procesos o hilos, brindando opciones avanzadas para el manejo de la salida y el control del número de procesos simultáneos.
+
+    #Instala parallel (si no está instalado)
+    sudo apt install parallel
+
+    #Ejemplo de uso de parallel
+    parallel ::: "comando1" "comando2" "comando3"
+
+En resumen, mientras que el operador **"&"** es una característica integrada en Bash para ejecutar comandos en segundo plano, el comando **'parallel'** es una herramienta externa que ofrece una forma más avanzada y estructurada de llevar a cabo operaciones en paralelo, proporcionando mayor control sobre la ejecución concurrente de comandos.
+
+
