@@ -73,3 +73,5 @@ El comando **'time'** en Bash se emplea para medir el tiempo de ejecución de un
 
 **Nota. Para este proyecto necesitará un sensor I2C y un conversor USB Serial de 3.3v. (el serial si es posible lleve su portátil a la tienda y verifique que esté bueno, hay muchos clones no funcionales en el mercado).**
 
+Se corrobora que el módulo convertidor USB a TTL sea reconocido por el dispositivo utilizando el administrador de dispositivos (Device Manager) de Google. 
+
