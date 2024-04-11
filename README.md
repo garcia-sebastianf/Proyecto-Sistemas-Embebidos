@@ -111,3 +111,5 @@ A continuación, se presentan las conexiones sobre la raspberry para realizar la
 
 ![image](https://github.com/garcia-sebastianf/Proyecto-Sistemas-Embebidos/assets/76495580/69e36c78-ce99-4189-b951-cc5f90fd9985)
 
+**Usando el módulo threading de Python o C (thread.h) implemente un hilo que lea de su sensor i2c a la tasa más alta que permita su sensor. Otro hilo que escriba en un puerto serial a mínimo 115200 bps el promedio de las útlimas N lecturas donde N puede ser configurado por el usuario con una variable de argumento de entrada serial de su programa en su programa (C o Python) y otro hilo que lea del puerto serial a la misma velocidad (115200), una trama así: (##PROMEDIO-NNN-##\n) donde NNN es el tamaño de la ventana de promedio, cualquier otro mensaje debe ser descartado y tomado como no válido.**
+
