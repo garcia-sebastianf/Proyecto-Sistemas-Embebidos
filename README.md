@@ -129,7 +129,15 @@ Una vez verificado el correcto funcionamiento de todos los scripts, se procede a
 
 Es importante destacar que la implementación de hilos en esta aplicación es muy adecuada. A pesar de la alta tasa de adquisición de datos de aceleración y la transmisión de datos por puerto serial a una alta velocidad de baudios, los tiempos de procesamiento son lo suficientemente rápidos como para permitir la realización de otras tareas dentro de las ventanas de tiempo de espera. Además, sin el uso de hilos, no sería posible calcular el promedio de aceleración en tiempo real, ya que tendríamos que detener la recepción de datos, calcular el promedio y luego reanudar la adquisición de datos, lo que resultaría en la pérdida de datos de aceleración. Sin embargo, con el uso de hilos, todos los datos que llegan se utilizan para calcular el promedio de aceleración. 
 
-Para estructurar todo el código, se comenzó realizando un esquema que muestra gráficamente cómo debe ser el flujo de los datos a través de los hilos. 
+Para estructurar todo el código, se realiza un esquema que muestra gráficamente cómo debe ser el flujo de los datos a través de los hilos. 
 
 ![image](https://github.com/garcia-sebastianf/Proyecto-Sistemas-Embebidos/assets/76495580/32b080a7-3043-4b84-b4d4-190234d5c331)
+
+Los hilos que reciben los datos pueden seguir ejecutándose solamente si la cola ha recibido datos de los otros hilos que los envían. Esta es la razón por la cual se pueden sincronizar los hilos mediante el uso de colas, evitando problemas de concurrencia, como los "glitches", que son muy difíciles, por no decir imposibles de detectar e identificar, esto NO significa que los hilos se estén ejecutando de forma secuencial.
+
+Para promediar los datos en tiempo real, se propone sumar de forma iterativa el dato dividido por el valor de la ventana N e ir acomulando ese valor en el instante en el que llega el dato de la cola enviado por el hilo de adquisición de los datos. Lo que es igual a dividir la fracción de la fórmula de promedio en una soma de fracciones homogéneas. 
+
+A continuación, se presenta la sección del script que realiza el promedio del dato de aceleración.
+
+![image](https://github.com/garcia-sebastianf/Proyecto-Sistemas-Embebidos/assets/76495580/4e2fee3c-8654-4b3d-ad20-1caf1043b0c5)
 
