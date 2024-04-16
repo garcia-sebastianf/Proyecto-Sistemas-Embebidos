@@ -141,3 +141,17 @@ A continuación, se presenta la sección del script que realiza el promedio del 
 
 ![image](https://github.com/garcia-sebastianf/Proyecto-Sistemas-Embebidos/assets/76495580/4e2fee3c-8654-4b3d-ad20-1caf1043b0c5)
 
+Integrando todo lo anterior en la estructura de hilos que describimos obtenemos el siguiente script de Python.
+
+    import serial
+    import time
+    import board
+    import threading
+    import queue
+    import busio
+    import adafruit_adxl34x
+    import math
+    import requests
+
+    def Promedio(ColaDatos,ColaVentana,ColaPromedio,ser,conexion_serial):
+    
