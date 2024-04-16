@@ -141,17 +141,40 @@ A continuación, se presenta la sección del script que realiza el promedio del 
 
 ![image](https://github.com/garcia-sebastianf/Proyecto-Sistemas-Embebidos/assets/76495580/4e2fee3c-8654-4b3d-ad20-1caf1043b0c5)
 
-Integrando todo lo anterior en la estructura de hilos que describimos obtenemos el siguiente script de Python.
+Integrando todo lo anterior en la estructura de hilos que describimos obtenemos el siguiente script de Python ubicado en el archivo xxx de este proyecto.
 
-    import serial
-    import time
-    import board
-    import threading
-    import queue
-    import busio
-    import adafruit_adxl34x
-    import math
-    import requests
+Al ejecutar el código obtenemos los siguientes resultados. Cabe mencionar que el usuario va a ser capaz de ingresar en tiempo real una nueva ventana para la 
+obtención del promedio con N datos, por lo que ese valor de N se actualizará.
 
-    def Promedio(ColaDatos,ColaVentana,ColaPromedio,ser,conexion_serial):
-    
+![image](https://github.com/garcia-sebastianf/Proyecto-Sistemas-Embebidos/assets/76495580/79585186-907b-4e23-a97e-39a45d587c2f)
+![image](https://github.com/garcia-sebastianf/Proyecto-Sistemas-Embebidos/assets/76495580/c8c14f0e-65f8-4983-af8b-e1621cded563)
+![image](https://github.com/garcia-sebastianf/Proyecto-Sistemas-Embebidos/assets/76495580/9cdf0299-8144-47f8-bb42-db752df73463)
+
+Se presenta el script de Python que permite que el usuario ingrese el valor de la ventana para la obtención del promedio de los datos:
+
+Valor del promedio de la aceleración en la transmisión. Se realiza la visualización con ayuda de PuTTY.
+
+![image](https://github.com/garcia-sebastianf/Proyecto-Sistemas-Embebidos/assets/76495580/d31d07ba-6953-433e-bd8b-a8468683e521)
+
+# Use el código anterior con un N fijo para subir a la nube de su preferencia cada segundo el promedio de los datos capturados de su sensor, debe ver en la página web de su nube el valor más reciente del sensor en una gráfica. 
+
+# Conclusiones
+
+- En procesos que contienen tiempos de espera, el uso de hilos representa una herramienta que permite optimizar de forma importante los tiempos de ejecución de dicho proceso al aprovechar esos tiempos muertos y ejecutar otros fragmentos del proceso o hilos.
+
+- No es recomendable el uso de variables globales para compartir datos entre hilos. Utilizando este método no se tiene control sobre la sincronización de los hilos, lo que puede causar fallos inesperados y en cualquier instante.
+
+- El uso de las estructuras de colas es una forma muy adecuada para compartir datos entre hilos e incluso para sincronizarlos. El uso de colas va más allá ya que se pueden usar para compartir memoria entre procesos.
+
+- El uso de hilos permite realizar procesos en paralelo. Por lo que se pueden realizar varias tareas de forma simultánea, esto es especialmente importante en algunas aplicaciones, por ejemplo, en este proyecto donde se requerían hacer varias tareas con distintos periféricos y módulos de hardward en tiempo real.
+
+- El uso de hilos no solo se encuadra en un sistema embebido, sino que es posible transmitir los valores obtenidos en una base de datos. Esto ofrece la posibilidad de optimizar procesos en sistemas Iot.
+
+
+            
+                    
+
+                    
+
+                        
+                    
