@@ -1,6 +1,6 @@
 # Proyecto-Sistemas-Embebidos
 
-Se realiza una implementación de un sistema embebido utilizando un sensor de aceleración y un modulo convertidor USB a TTL. Se utilizan varios hilos para ejecutar varias tareas al mismo tiempo. Se envían datos al servidor de ThingSpeak.
+Se realiza una implementación de un sistema embebido utilizando un sensor de aceleración y un módulo convertidor USB a TTL. Se utilizan varios hilos para ejecutar varias tareas al mismo tiempo. Se envían datos al servidor de ThingSpeak.
 
 # ¿Cuál es la diferencia entre una tarea, un proceso y un hilo, (task, process, thread)?
 
@@ -12,7 +12,7 @@ El término tarea es a veces utilizado de una forma más general, ya sea para re
 
 # ¿Cómo se maneja el control de prioridad de un proceso en GNU/Linux, detallando que es el NI y el PR y ¿Cómo se modifica este valor para un proceso?¿Cómo se cambia el valor de este proceso para todos los procesos de un usuario?
 
-En sistemas GNU/Linux, el control de prioridad de un proceso se gestiona mediante el Nice Value (NI) y el Priority (PR). El NI, que varía de -20 a 19, determina la prioridad de un proceso, donde un NI vajo indica mayor prioridad. Para modificar la prioridad de un proceso, se puede usar el siguiente comando: 
+En sistemas GNU/Linux, el control de prioridad de un proceso se gestiona mediante el Nice Value (NI) y el Priority (PR). El NI, que varía de -20 a 19, determina la prioridad de un proceso, donde un NI bajo indica mayor prioridad. Para modificar la prioridad de un proceso, se puede usar el siguiente comando: 
 
     renice -c <nuevo_nice_value> -p <PID_del_proceso>
     
